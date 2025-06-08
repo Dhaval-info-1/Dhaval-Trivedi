@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
+import Header from '../src/components/Header';
 
 export default function Home() {
   return (
@@ -25,19 +26,7 @@ export default function Home() {
         <meta name="google-site-verification" content="ouKkpKksE2eWbzxs52IK0YMZ63WpyoZ2UKFHeNEhBLg" />
       </Head>
 
-      <header className="fixed top-0 w-full bg-primary bg-opacity-90 border-b border-accent z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-3xl font-mono text-accent">DM<span className="text-text">.</span></h1>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><Link href="#about" className="text-text hover:text-accent transition-colors">About</Link></li>
-              <li><Link href="#experience" className="text-text hover:text-accent transition-colors">Experience</Link></li>
-              <li><Link href="#blog" className="text-text hover:text-accent transition-colors">Blog</Link></li>
-              <li><Link href="#contact" className="btn-primary">Contact</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="pt-20">
         <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
