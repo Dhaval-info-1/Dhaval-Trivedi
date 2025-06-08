@@ -3,64 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhaval Makwana - Project Manager</title>
+    <title>Dhaval Makwana - Portfolio | Project Manager</title>
+    <meta name="description" content="Explore the portfolio of Dhaval Makwana, a Technical Project/Product Manager skilled in Agile, stakeholder management, and data-driven decisions. View projects, resume, and insights.">
+    <meta name="keywords" content="Dhaval Makwana, Project Manager, Product Manager, Portfolio, Agile, Technical Project Manager, Resume, Blog">
+    <meta name="author" content="Dhaval Makwana">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Dhaval Makwana - Portfolio | Project Manager">
+    <meta property="og:description" content="Explore the portfolio of Dhaval Makwana, a Technical Project/Product Manager skilled in Agile, stakeholder management, and data-driven decisions.">
+    <meta property="og:image" content="https://github.com/Dhaval-info-1/Dhaval-Makwana/blob/main/images/7d.jpg">
+    <meta property="og:url" content="https://dhaval-info-1.github.io/Dhaval-Makwana/web.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dhaval Makwana Portfolio">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@dhaval_info_">
+    <meta name="twitter:site" content="@dhaval_info_">
+    <meta name="twitter:title" content="Dhaval Makwana - Portfolio | Project Manager">
+    <meta name="twitter:description" content="Explore the portfolio of Dhaval Makwana, a Technical Project/Product Manager skilled in Agile, stakeholder management, and data-driven decisions.">
+    <meta name="twitter:image" content="https://github.com/Dhaval-info-1/Dhaval-Makwana/blob/main/images/7d.jpg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Dhaval Makwana",
+      "jobTitle": "Technical Project/Product Manager",
+      "description": "Technical Project/Product Manager with experience in Agile methodologies, cross-functional team leadership, stakeholder management, data-driven decision making, client relations, and pre-sales.",
+      "url": "https://dhaval-info-1.github.io/Dhaval-Makwana/web.html",
+      "sameAs": [
+        "https://www.instagram.com/dhaval.info/",
+        "https://www.linkedin.com/in/dhavalmakwana-/",
+        "https://twitter.com/dhaval_info_",
+        "https://medium.com/@dhaval.info",
+        "mailto:dhaval.m@brilworks.com"
+      ],
+      "knowsAbout": [
+        "Project Management",
+        "Product Management",
+        "Agile Methodologies",
+        "Cross-functional Team Leadership",
+        "Stakeholder Management",
+        "Data-driven Decision Making",
+        "Client Relations",
+        "Pre-Sales",
+        "Technical Planning"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "MBA in Information Technology"
+      },
+      "workExample": [
+        {
+          "@type": "Article",
+          "name": "Navigating the Agile Seas: A Visual Expedition into Scrum",
+          "url": "https://medium.com/@dhaval.info/navigating-the-agile-seas-a-visual-expedition-into-scrum-d004f4ce064d"
+        },
+        {
+          "@type": "Article",
+          "name": "Cracking the Code: A Project Manager’s Path to High-Quality Code Projects!",
+          "url": "https://medium.com/@dhaval.info/project-management-by-dhaval-makwana-d5d78ec9f184"
+        }
+      ]
+    }
+    </script>
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        :root {
+            --primary-color: #2d3436;
+            --accent-color: #00cec9;
+            --text-color: #dfe6e9;
+            --gradient-start: #2d3436;
+            --gradient-end: #000000;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4;
-            color: #333;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            background-size: 200% 200%;
+            color: var(--text-color);
         }
+
         header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
+            background: rgba(45, 52, 54, 0.9);
+            color: var(--text-color);
+            padding: 25px 0; /* Increased padding */
             text-align: center;
+            position: sticky; /* Make header sticky */
+            top: 0;
+            z-index: 100;
         }
+
         h1, h2 {
             margin: 0;
+            padding-bottom: 10px; /* Add some space below headings */
         }
+
+        h2 {
+            border-bottom: 1px solid var(--accent-color); /* Underline section titles */
+            display: inline-block; /* For border to fit content */
+            margin-bottom: 20px; /* Space after title */
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex; /* For gap property */
+            justify-content: center;
+            gap: 35px; /* Increased gap */
         }
+
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            display: inline; /* Retained for compatibility, but flex handles spacing */
         }
+
         nav ul li a {
-            color: #fff;
+            color: var(--text-color);
             text-decoration: none;
+            position: relative; /* For ::after pseudo-element */
+            padding: 5px 0;
+            transition: color 0.3s ease;
         }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Position underline slightly below text */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
         section {
-            padding: 20px;
-            margin: 20px;
-            background: #fff;
+            padding: 30px; /* Increased padding */
+            margin: 30px 20px; /* Adjusted margin */
+            background: rgba(45, 52, 54, 0.7);
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            opacity: 0; /* Initial state for animation */
+            transform: translateY(20px); /* Initial state for animation */
+            /* Animation will be applied by JS */
         }
+
+        section.visible { /* Class to be added by JS */
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
         footer {
             text-align: center;
-            padding: 20px 0;
-            background: #333;
-            color: #fff;
+            padding: 30px 0; /* Increased padding */
+            margin-top: 30px; /* Added margin-top */
+            background: rgba(45, 52, 54, 0.9);
+            color: var(--text-color);
         }
+
         .container {
-            width: 80%;
+            max-width: 1100px; /* Adjusted max-width */
             margin: auto;
-            overflow: hidden;
+            overflow: hidden; /* Retained */
+            padding: 0 20px; /* Added horizontal padding */
         }
+
         .portfolio-item, .blog-post {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            background: rgba(60, 70, 75, 0.5); /* Darker card background */
+            padding: 25px; /* Increased padding */
+            border-radius: 15px; /* Increased border-radius */
+            margin-bottom: 25px; /* Adjusted margin */
+            border: 1px solid rgba(0, 206, 201, 0.2); /* Softer accent border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .portfolio-item:hover, .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
         .blog-post a {
-            color: #333;
-            text-decoration: underline;
+            display: inline-block; /* To allow padding and border */
+            padding: 10px 20px;
+            border: 1px solid var(--accent-color);
+            border-radius: 25px; /* Pill shape */
+            color: var(--accent-color);
+            text-decoration: none; /* Remove underline for button look */
+            margin-top: 15px; /* Space above the button */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .blog-post a:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color); /* Dark text on hover */
+        }
+
+        /* Form Styles */
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 22px); /* Full width minus padding & border */
+            padding: 12px;
+            margin-bottom: 20px; /* Spacing between fields */
+            background-color: rgba(0, 0, 0, 0.3);
+            color: var(--text-color);
+            border: 1px solid var(--accent-color);
+            border-radius: 8px; /* Softer radius */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none; /* Remove default browser outline */
+            border-color: #00fffb; /* Brighter accent for focus */
+            box-shadow: 0 0 8px var(--accent-color);
+        }
+
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 25px; /* Adjusted padding */
+            border: none;
+            border-radius: 25px; /* Pill shape */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background-color: #00b2a9; /* Slightly darker accent */
+            color: var(--primary-color);
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Social Media Links in Footer */
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0; /* Margin below the icons, before copyright */
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Spacing between icons */
+        }
+
+        .social-links li {
+            display: inline-block; /* Not strictly necessary with flex, but good practice */
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.8em; /* Larger icons */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px); /* Lift icon on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px; /* Reduced gap for vertical layout */
+            }
+
+            .container {
+                padding: 0 15px; /* Adjust container padding */
+            }
+
+            section {
+                margin: 20px 10px; /* Adjust section margins */
+                padding: 20px; /* Adjust section padding */
+            }
+
+            h1 {
+                font-size: 2em; /* Adjust main title size */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Adjust section title size */
+            }
+
+            .social-links {
+                gap: 15px; /* Reduce gap for social icons */
+            }
+            .social-links a {
+                font-size: 1.6em; /* Slightly smaller social icons */
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                width: 100%; /* Ensure form inputs take full width */
+                padding: 12px; /* Re-adjust padding if calc was an issue, but with box-sizing it should be fine */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 0;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            nav ul li a {
+                font-size: 0.95em;
+            }
+
+            .portfolio-item, .blog-post {
+                padding: 15px;
+            }
+
+            .blog-post a { /* Read more button */
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+
+            .contact-form button {
+                padding: 10px 20px;
+                font-size: 0.95em;
+            }
         }
     </style>
 </head>
@@ -131,8 +438,39 @@ I am a result-oriented Technical Project/Product Manager with a proven track rec
 </div>
 
 <footer>
+    <ul class="social-links">
+        <li><a href="https://www.instagram.com/dhaval.info/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/dhavalmakwana-/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://medium.com/@dhaval.info" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a></li>
+        <li><a href="https://twitter.com/dhaval_info_" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="mailto:dhaval.m@brilworks.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+    </ul>
     <p>&copy; 2024 Dhaval Makwana. All rights reserved.</p>
 </footer>
+
+<script>
+    // Intersection Observer for fade-in animations on sections
+    const sections = document.querySelectorAll('section');
+
+    const observerOptions = {
+        root: null, // relative to document viewport
+        rootMargin: '0px',
+        threshold: 0.1 // trigger when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observerInstance.unobserve(entry.target); // Stop observing once visible
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
 </body>
 </html>
