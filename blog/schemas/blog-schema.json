@@ -1,0 +1,29 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Dhaval Makwana's AI Insights",
+    "description": "Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader",
+    "publisher": {
+        "@type": "Person",
+        "name": "Dhaval Makwana",
+        "jobTitle": "AI Innovation Leader & Project Manager",
+        "image": "../images/7d.jpg"
+    },
+    "blogPost": [
+        {
+            "@type": "BlogPosting",
+            "headline": "Understanding Transformer Architecture: A Deep Dive",
+            "description": "A comprehensive technical analysis of transformer architecture, exploring attention mechanisms, positional encoding, and model parallelism.",
+            "keywords": "transformer architecture, self attention mechanism, neural networks, deep learning, NLP models, AI architecture",
+            "datePublished": "2025-06-08",
+            "author": {
+                "@type": "Person",
+                "name": "Dhaval Makwana"
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://dhavalmakwana.com/blog/transformer-deep-dive"
+            }
+        }
+    ]
+}

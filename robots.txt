@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /images/
+
+# Sitemaps
+Sitemap: https://dhavalmakwana.com/sitemap.xml
+
+# Crawl-delay for heavy resources
+Crawl-delay: 2
+
+# Block search engines from crawling certain files
+Disallow: /scripts/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /config/

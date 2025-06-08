@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & GenAI Insights Hub | Dhaval Makwana</title>
+    <meta name="description" content="In-depth AI, GenAI, and digital transformation insights by Dhaval Makwana. Explore comprehensive articles on AI architecture, ethics, and implementation.">
+    <meta name="keywords" content="AI Blog, GenAI, Artificial Intelligence, Machine Learning, Digital Transformation, NLP, Computer Vision, AI Ethics, AI Implementation, Dhaval Makwana">
+    <meta name="author" content="Dhaval Makwana">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dhavalmakwana.com/blog">
+    <meta property="og:title" content="AI & GenAI Insights Hub | Dhaval Makwana">
+    <meta property="og:description" content="Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader">
+    <meta property="og:image" content="https://dhavalmakwana.com/images/7d.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI & GenAI Insights Hub | Dhaval Makwana">
+    <meta name="twitter:description" content="Expert insights on AI, Machine Learning, and GenAI">
+    <meta name="twitter:image" content="https://dhavalmakwana.com/images/7d.jpg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/blog.css">
+    <link rel="stylesheet" href="styles/blog-enhanced.css">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a192f">
+    
+    <!-- Icons -->
+    <link rel="icon" href="images/download.jpeg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="images/download.jpeg">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="scripts/blog-search.js" as="script">
+    <link rel="preload" href="scripts/blog-pagination.js" as="script">
+    <link rel="preload" href="scripts/animations.js" as="script">
+    <link rel="preload" href="fonts/your-main-font.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        :root {
+            --primary-color: #0a192f;
+            --accent-color: #64ffda;
+            --text-color: #ccd6f6;
+            --text-color-secondary: #8892b0;
+            --nav-height: 70px;
+            --border-radius: 4px;
+            --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+            --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', sans-serif;
+        }
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            background: linear-gradient(120deg, #0a192f 60%, #112240 100%);
+            color: var(--text-color);
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(90deg, var(--primary-color) 60%, var(--accent-color) 100%);
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+            border-bottom: 1.5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--nav-height);
+        }
+        .logo {
+            font-family: var(--font-mono);
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin: 0;
+            cursor: pointer;
+            transition: var(--transition);
+            text-shadow: 0 2px 16px rgba(100,255,218,0.15);
+        }
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 0.5rem;
+            transition: var(--transition);
+        }
+        nav a:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        .blog-hero {
+            margin-top: var(--nav-height);
+            padding: 80px 0 40px 0;
+            text-align: center;
+            background: linear-gradient(120deg, #112240 60%, #0a192f 100%);
+            animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .blog-hero h1 {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .blog-hero p {
+            color: var(--text-color-secondary);
+            font-size: 1.2rem;
+        }
+        .blog-list {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+        .blog-card {
+            background: rgba(10,25,47,0.95);
+            border: 1.5px solid var(--accent-color);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px 0 rgba(100,255,218,0.07);
+            overflow: hidden;
+            transition: var(--transition), box-shadow 0.4s cubic-bezier(.4,0,.2,1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            box-shadow: 0 8px 32px 0 rgba(100,255,218,0.18);
+            border-color: var(--accent-color);
+            transform: translateY(-8px) scale(1.03);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1.5px solid var(--accent-color);
+        }
+        .blog-card-content {
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+        }
+        .blog-card-content h2 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .blog-card-content p {
+            color: var(--text-color-secondary);
+            font-size: 1rem;
+        }
+        .blog-card-content .blog-meta {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-color-secondary);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">DM<span class="accent">.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact" class="contact-button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="blog-hero">
+        <h1>AI & GenAI Insights</h1>
+        <p>Explore in-depth articles on Artificial Intelligence, GenAI, and the future of digital transformation. Organized by pillars, clusters, and subclusters for easy navigation.</p>
+    </section>
+    <section class="blog-list">
+        <!-- BLOG CARDS WILL BE INSERTED HERE -->
+        <a href="blog/genai-foundations.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="GenAI Foundations">
+            <div class="blog-card-content">
+                <h2>GenAI Foundations: The New Era of Intelligence</h2>
+                <p>Explore the core principles and breakthroughs that define the generative AI revolution, from transformers to foundation models.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: GenAI | Subcluster: Theory</div>
+            </div>
+        </a>
+        <a href="blog/llm-architecture.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="LLM Architecture">
+            <div class="blog-card-content">
+                <h2>Inside LLMs: Architecture, Training, and Scaling</h2>
+                <p>Deep dive into the architecture and training of large language models, including scaling laws and optimization strategies.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: LLMs | Subcluster: Architecture</div>
+            </div>
+        </a>
+        <a href="blog/ai-ethics.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="AI Ethics">
+            <div class="blog-card-content">
+                <h2>AI Ethics: Navigating the Moral Landscape</h2>
+                <p>Unpack the ethical challenges of AI, from bias and fairness to transparency and responsible deployment.</p>
+                <div class="blog-meta">Pillar: Governance | Cluster: Ethics | Subcluster: Responsible AI</div>
+            </div>
+        </a>
+        <a href="blog/ai-in-enterprise.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="AI in Enterprise">
+            <div class="blog-card-content">
+                <h2>AI in the Enterprise: From Pilot to Production</h2>
+                <p>Best practices and case studies for scaling AI solutions in real-world business environments.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Enterprise | Subcluster: Deployment</div>
+            </div>
+        </a>
+        <a href="blog/vision-transformers.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=800&q=80" alt="Vision Transformers">
+            <div class="blog-card-content">
+                <h2>Vision Transformers: The Next Leap in Computer Vision</h2>
+                <p>How transformer models are revolutionizing image understanding and computer vision tasks.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: Vision | Subcluster: Transformers</div>
+            </div>
+        </a>
+        <a href="blog/ai-product-management.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="AI Product Management">
+            <div class="blog-card-content">
+                <h2>AI Product Management: Building for the Future</h2>
+                <p>Strategies for managing AI products, from ideation to launch and continuous improvement.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Product | Subcluster: Management</div>
+            </div>
+        </a>
+        <a href="blog/ai-ops.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="AI Ops">
+            <div class="blog-card-content">
+                <h2>AI Ops: Automating Operations with Intelligence</h2>
+                <p>How AI is transforming IT operations, monitoring, and incident response in modern enterprises.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Operations | Subcluster: AI Ops</div>
+            </div>
+        </a>
+        <a href="blog/nlp-advancements.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="NLP Advancements">
+            <div class="blog-card-content">
+                <h2>NLP Advancements: Beyond Text Generation</h2>
+                <p>Explore the latest breakthroughs in natural language processing, from summarization to reasoning.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: NLP | Subcluster: Advancements</div>
+            </div>
+        </a>
+        <a href="blog/ai-security.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="AI Security">
+            <div class="blog-card-content">
+                <h2>AI Security: Defending Against Adversarial Attacks</h2>
+                <p>How to secure AI systems against adversarial threats and ensure robust, trustworthy models.</p>
+                <div class="blog-meta">Pillar: Governance | Cluster: Security | Subcluster: Adversarial</div>
+            </div>
+        </a>
+        <a href="blog/ai-for-healthcare.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=800&q=80" alt="AI for Healthcare">
+            <div class="blog-card-content">
+                <h2>AI for Healthcare: Transforming Patient Outcomes</h2>
+                <p>Case studies and innovations in AI-driven healthcare, from diagnostics to personalized medicine.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Healthcare | Subcluster: Innovation</div>
+            </div>
+        </a>
+        <a href="blog/ai-in-education.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="AI in Education">
+            <div class="blog-card-content">
+                <h2>AI in Education: Personalized Learning at Scale</h2>
+                <p>How AI is enabling adaptive learning, intelligent tutoring, and personalized education experiences.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Education | Subcluster: Personalization</div>
+            </div>
+        </a>
+        <a href="blog/ai-hardware.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="AI Hardware">
+            <div class="blog-card-content">
+                <h2>AI Hardware: Accelerating the Future</h2>
+                <p>Explore the chips, accelerators, and infrastructure powering the next generation of AI workloads.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: Hardware | Subcluster: Acceleration</div>
+            </div>
+        </a>
+        <a href="blog/ai-ethics-in-practice.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="AI Ethics in Practice">
+            <div class="blog-card-content">
+                <h2>AI Ethics in Practice: Real-World Dilemmas</h2>
+                <p>Practical approaches to implementing ethical AI in organizations, with real-world examples.</p>
+                <div class="blog-meta">Pillar: Governance | Cluster: Ethics | Subcluster: Practice</div>
+            </div>
+        </a>
+        <a href="blog/ai-for-marketing.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="AI for Marketing">
+            <div class="blog-card-content">
+                <h2>AI for Marketing: Hyper-Personalization and Beyond</h2>
+                <p>How AI is revolutionizing marketing, from customer segmentation to content generation.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Marketing | Subcluster: Personalization</div>
+            </div>
+        </a>
+        <a href="blog/ai-in-finance.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=800&q=80" alt="AI in Finance">
+            <div class="blog-card-content">
+                <h2>AI in Finance: Risk, Trading, and Automation</h2>
+                <p>Explore the impact of AI on financial services, from fraud detection to algorithmic trading.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Finance | Subcluster: Automation</div>
+            </div>
+        </a>
+        <a href="blog/ai-for-sustainability.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="AI for Sustainability">
+            <div class="blog-card-content">
+                <h2>AI for Sustainability: Green Tech and Climate Action</h2>
+                <p>How AI is being used to address climate change, optimize energy, and drive sustainability.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Sustainability | Subcluster: Green Tech</div>
+            </div>
+        </a>
+        <a href="blog/ai-mlops.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="AI MLOps">
+            <div class="blog-card-content">
+                <h2>MLOps: Bridging Development and Operations</h2>
+                <p>Best practices for deploying, monitoring, and maintaining AI models in production.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: MLOps | Subcluster: Deployment</div>
+            </div>
+        </a>
+        <a href="blog/ai-in-robotics.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="AI in Robotics">
+            <div class="blog-card-content">
+                <h2>AI in Robotics: From Perception to Action</h2>
+                <p>Discover how AI is powering the next generation of intelligent robots and automation.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Robotics | Subcluster: Perception</div>
+            </div>
+        </a>
+        <a href="blog/ai-for-creative-industries.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="AI for Creative Industries">
+            <div class="blog-card-content">
+                <h2>AI for Creative Industries: Art, Music, and Design</h2>
+                <p>How generative AI is transforming art, music, and design workflows for creators.</p>
+                <div class="blog-meta">Pillar: Applications | Cluster: Creative | Subcluster: Generative</div>
+            </div>
+        </a>
+        <a href="blog/ai-infrastructure.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="AI Infrastructure">
+            <div class="blog-card-content">
+                <h2>AI Infrastructure: Building for Scale</h2>
+                <p>Architecting scalable, reliable infrastructure for modern AI workloads and teams.</p>
+                <div class="blog-meta">Pillar: Foundations | Cluster: Infrastructure | Subcluster: Scale</div>
+            </div>
+        </a>
+        <a href="blog/ai-explainability.html" class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="AI Explainability">
+            <div class="blog-card-content">
+                <h2>AI Explainability: Making Models Transparent</h2>
+                <p>Techniques and tools for interpreting and explaining complex AI models to stakeholders.</p>
+                <div class="blog-meta">Pillar: Governance | Cluster: Explainability | Subcluster: Tools</div>
+            </div>
+        </a>
+    </section>
+</body>
+</html>

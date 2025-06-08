@@ -1,0 +1,94 @@
+{
+    "blogMetadata": {
+        "title": "Dhaval Makwana's AI Insights",
+        "description": "Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader",
+        "baseUrl": "https://dhavalmakwana.com",
+        "author": {
+            "name": "Dhaval Makwana",
+            "title": "AI Innovation Leader & Project Manager",
+            "image": "/images/7d.jpg",
+            "bio": "AI Innovation Leader with expertise in enterprise AI implementation and digital transformation."
+        }
+    },
+    "categories": [
+        {
+            "id": "foundation-models",
+            "name": "Foundation Models & Architecture",
+            "description": "Deep dives into AI model architectures and implementations",
+            "slug": "foundation-models",
+            "posts": [
+                "transformer-deep-dive",
+                "model-scaling-efficiency",
+                "model-architecture-innovations",
+                "llm-architecture"
+            ]
+        },
+        {
+            "id": "ai-ethics",
+            "name": "AI Ethics & Governance",
+            "description": "Exploring ethical considerations in AI development",
+            "slug": "ai-ethics",
+            "posts": [
+                "ai-ethics",
+                "ai-ethics-in-practice"
+            ]
+        },
+        {
+            "id": "ai-applications",
+            "name": "AI Applications & Use Cases",
+            "description": "Real-world applications and implementation stories",
+            "slug": "ai-applications",
+            "posts": [
+                "ai-in-enterprise",
+                "ai-product-management",
+                "vision-transformers"
+            ]
+        }
+    ],
+    "posts": {
+        "transformer-deep-dive": {
+            "title": "Understanding Transformer Architecture: A Deep Dive",
+            "description": "A comprehensive technical analysis of transformer architecture, exploring attention mechanisms, positional encoding, and model parallelism.",
+            "date": "2025-06-08",
+            "author": "Dhaval Makwana",
+            "category": "foundation-models",
+            "tags": ["transformers", "deep learning", "nlp", "attention mechanism"],
+            "readTime": 15,
+            "relatedPosts": [
+                "model-scaling-efficiency",
+                "model-architecture-innovations",
+                "llm-architecture"
+            ]
+        },
+        "ai-ethics": {
+            "title": "AI Ethics: Navigating the Moral Landscape",
+            "description": "Unpack the ethical challenges of AI, from bias and fairness to transparency and responsible deployment.",
+            "date": "2025-06-08",
+            "author": "Dhaval Makwana",
+            "category": "ai-ethics",
+            "tags": ["ai ethics", "responsible ai", "fairness", "transparency"],
+            "readTime": 12,
+            "relatedPosts": [
+                "ai-in-enterprise",
+                "ai-ethics-in-practice",
+                "ai-product-management"
+            ]
+        }
+    },
+    "seoConfig": {
+        "defaultTitle": "AI Insights & Knowledge Hub | Dhaval Makwana",
+        "titleTemplate": "%s | Dhaval Makwana",
+        "defaultDescription": "Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader",
+        "siteUrl": "https://dhavalmakwana.com",
+        "openGraph": {
+            "type": "website",
+            "locale": "en_US",
+            "site_name": "Dhaval Makwana's AI Insights"
+        },
+        "twitter": {
+            "handle": "@dhaval_ai",
+            "site": "@dhaval_ai",
+            "cardType": "summary_large_image"
+        }
+    }
+}

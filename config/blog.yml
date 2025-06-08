@@ -1,0 +1,73 @@
+# Blog Configuration
+site_name: "Dhaval Makwana's AI Insights"
+site_description: "Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader"
+author:
+  name: "Dhaval Makwana"
+  title: "AI Innovation Leader & Project Manager"
+  image: "../images/7d.jpg"
+
+# Categories
+categories:
+  foundation_models:
+    name: "Foundation Models & Architecture"
+    description: "Deep dives into AI model architectures, scaling, and implementation"
+    keywords: ["transformer architecture", "language models", "neural networks", "AI scaling"]
+  ai_applications:
+    name: "AI Applications & Use Cases"
+    description: "Practical applications and real-world implementations of AI"
+    keywords: ["enterprise AI", "AI solutions", "use cases", "implementation"]
+  ai_ethics:
+    name: "AI Ethics & Governance"
+    description: "Ethical considerations and governance frameworks in AI"
+    keywords: ["AI ethics", "responsible AI", "AI governance", "AI safety"]
+  ai_development:
+    name: "AI Development & Implementation"
+    description: "Technical guides and best practices for AI development"
+    keywords: ["AI development", "machine learning", "MLOps", "AI engineering"]
+
+# Blog Posts Metadata
+posts:
+  transformer-deep-dive:
+    title: "Understanding Transformer Architecture: A Deep Dive"
+    category: "foundation_models"
+    date: "2025-06-08"
+    readTime: 15
+    keywords:
+      - transformer architecture
+      - self attention mechanism
+      - neural networks
+      - deep learning
+      - NLP models
+      - AI architecture
+    related_posts:
+      - model-scaling-efficiency
+      - model-architecture-innovations
+      - llm-architecture
+    faq:
+      - question: "What are the key components of transformer architecture?"
+        answer: "The key components include multi-head self-attention mechanisms, position-wise feed-forward networks, layer normalization and residual connections, and positional encodings."
+      - question: "How does self-attention mechanism work in transformers?"
+        answer: "Self-attention mechanism computes attention scores using queries, keys, and values through the formula Attention(Q, K, V) = softmax(QK^T/√d_k)V, allowing the model to weigh the importance of different parts of the input sequence dynamically."
+      - question: "What is multi-head attention in transformer models?"
+        answer: "Multi-head attention allows the model to attend to information from different representation subspaces. It typically uses 8-16 attention heads, enabling parallel processing and learning different aspects of relationships between tokens."
+
+  model-scaling-efficiency:
+    title: "Model Scaling and Efficiency in Large Language Models"
+    category: "foundation_models"
+    date: "2025-06-09"
+    readTime: 12
+    keywords:
+      - model scaling
+      - LLM efficiency
+      - computational optimization
+      - AI training
+      - distributed learning
+    related_posts:
+      - transformer-deep-dive
+      - model-architecture-innovations
+      - ai-in-enterprise
+    faq:
+      - question: "What are the key considerations for scaling language models?"
+        answer: "Key considerations include understanding scaling laws, optimizing training techniques, managing memory efficiently, implementing distributed training approaches, and making infrastructure decisions."
+      - question: "How can organizations optimize training efficiency for large models?"
+        answer: "Organizations can optimize training through gradient accumulation, mixed precision training, efficient optimizer implementations, and dynamic batch sizing."

@@ -1,0 +1,154 @@
+/* Add to existing blog.css */
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 1rem 2rem;
+    background: rgba(10, 25, 47, 0.8);
+    margin-bottom: 2rem;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-secondary);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '/';
+    margin-left: 0.5rem;
+    color: var(--accent-color);
+}
+
+.breadcrumbs a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+}
+
+/* Table of Contents */
+.toc {
+    position: sticky;
+    top: 100px;
+    background: rgba(10, 25, 47, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.toc-title {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.toc-list a:hover {
+    color: var(--accent-color);
+}
+
+/* Social Share Buttons */
+.social-share {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.share-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.share-button:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Enhanced Blog Cards */
+.blog-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent-color) 0%, transparent 100%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.blog-card:hover::before {
+    opacity: 0.1;
+}
+
+/* Category Pills */
+.category-pill {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    margin: 0.25rem;
+    transition: var(--transition);
+}
+
+.category-pill:hover {
+    background: rgba(100, 255, 218, 0.2);
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(100, 255, 218, 0.1);
+    z-index: 1001;
+}
+
+.reading-progress-bar {
+    height: 100%;
+    background: var(--accent-color);
+    width: 0;
+    transition: width 0.1s ease;
+}
