@@ -358,8 +358,8 @@ main {
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #0a192f;
-        --card-background: rgba(10, 25, 47, 0.95);
+        --primary-color: #0f0e17;
+        --card-background: rgba(15, 14, 23, 0.95);
     }
 }
 

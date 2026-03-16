@@ -1,10 +1,10 @@
 /* Advanced Blog Styling with Animations */
 :root {
-    --primary-color: #0a192f;
-    --accent-color: #64ffda;
-    --text-color: #ccd6f6;
-    --text-color-secondary: #8892b0;
-    --card-background: rgba(10, 25, 47, 0.95);
+    --primary-color: #0f0e17;
+    --accent-color: #ff8906;
+    --text-color: #fffffe;
+    --text-color-secondary: #a7a9be;
+    --card-background: rgba(15, 14, 23, 0.95);
     --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     --container-width-xl: 1200px;
     --container-width-lg: 960px;
@@ -42,7 +42,7 @@
 
 .search-input:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 137, 6, 0.3);
 }
 
 /* Category Navigation */
@@ -135,7 +135,7 @@
 .faq-section {
     margin-top: 3rem;
     padding: 2rem;
-    background: rgba(10, 25, 47, 0.5);
+    background: rgba(15, 14, 23, 0.5);
     border-radius: 8px;
 }
 
@@ -190,7 +190,7 @@
 }
 
 .loading {
-    background: linear-gradient(90deg, var(--card-background) 0%, var(--accent-color) 50%, var(--card-background) 100%);
-    background-size: 1000px 100%;
+    background: var(--card-background);
     animation: shimmer 2s infinite;
+    opacity: 0.7;
 }
