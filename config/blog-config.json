@@ -1,10 +1,10 @@
 {
     "blogMetadata": {
-        "title": "Dhaval Makwana's AI Insights",
+        "title": "Dhaval Trivedi's AI Insights",
         "description": "Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader",
-        "baseUrl": "https://dhavalmakwana.com",
+        "baseUrl": "https://dhavaltrivedi.com",
         "author": {
-            "name": "Dhaval Makwana",
+            "name": "Dhaval Trivedi",
             "title": "AI Innovation Leader & Project Manager",
             "image": "/images/7d.jpg",
             "bio": "AI Innovation Leader with expertise in enterprise AI implementation and digital transformation."
@@ -50,7 +50,7 @@
             "title": "Understanding Transformer Architecture: A Deep Dive",
             "description": "A comprehensive technical analysis of transformer architecture, exploring attention mechanisms, positional encoding, and model parallelism.",
             "date": "2025-06-08",
-            "author": "Dhaval Makwana",
+            "author": "Dhaval Trivedi",
             "category": "foundation-models",
             "tags": ["transformers", "deep learning", "nlp", "attention mechanism"],
             "readTime": 15,
@@ -64,7 +64,7 @@
             "title": "AI Ethics: Navigating the Moral Landscape",
             "description": "Unpack the ethical challenges of AI, from bias and fairness to transparency and responsible deployment.",
             "date": "2025-06-08",
-            "author": "Dhaval Makwana",
+            "author": "Dhaval Trivedi",
             "category": "ai-ethics",
             "tags": ["ai ethics", "responsible ai", "fairness", "transparency"],
             "readTime": 12,
@@ -76,14 +76,14 @@
         }
     },
     "seoConfig": {
-        "defaultTitle": "AI Insights & Knowledge Hub | Dhaval Makwana",
-        "titleTemplate": "%s | Dhaval Makwana",
+        "defaultTitle": "AI Insights & Knowledge Hub | Dhaval Trivedi",
+        "titleTemplate": "%s | Dhaval Trivedi",
         "defaultDescription": "Expert insights on AI, Machine Learning, and GenAI from an AI Innovation Leader",
-        "siteUrl": "https://dhavalmakwana.com",
+        "siteUrl": "https://dhavaltrivedi.com",
         "openGraph": {
             "type": "website",
             "locale": "en_US",
-            "site_name": "Dhaval Makwana's AI Insights"
+            "site_name": "Dhaval Trivedi's AI Insights"
         },
         "twitter": {
             "handle": "@dhaval_ai",
